@@ -8,9 +8,11 @@ import org.openqa.selenium.WebElement;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -166,6 +168,21 @@ public class ReusebleMethods {
             FileUtils.copyFile(geciciDosya,istenenWebelementScreenshot);
         } catch (IOException e) {
             System.out.println("Screenshot kopyalanamadi");
+            throw new RuntimeException(e);
+        }
+
+
+    }
+
+    public static void tumSayfaScreenShoot(){
+
+        String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
+        String dosyaYolu = ""+ tarih+".png";
+
+        TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
+        try {
+            FileUtils.copyFile(ts.getScreenshotAs(OutputType.FILE),new File(dosyaYolu));
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
