@@ -15,4 +15,7 @@ public class YoutubePage {
 
     @FindBy(name = "search_query")
     public WebElement searchBox;
+
+    @FindBy(xpath = "//title")
+    public WebElement titleElementi;
 }
