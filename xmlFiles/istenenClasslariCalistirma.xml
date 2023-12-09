@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="istenen classları çalıştırma">
+    <test name="classlar">
+        <classes>
+            <class name="tests.week01.C03_youtTest_POM"></class>
+            <class name="tests.week01.C05_qualitydemi_Neg">
+
+            </class>
+        </classes>
+    </test>
+</suite>

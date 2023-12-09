@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+ <suite name="istenen methodlar">
+    <test name="istenen method">
+        <classes>
+            <class name="tests.week01.C03_youtTest_POM">
+                <methods>
+                    <include name="youtubeTest">
+                    </include>
+                </methods>
+            </class>
+
+        </classes>
+
+    </test>
+
+</suite>
